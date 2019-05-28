@@ -4,7 +4,7 @@ spider:
     initialDelay: 0
     maxRetries: 3
     retryDelayMillis: 1000
-    useConsolePipeline: true
+    useConsolePipeline: false
 
   request:
     sleepTime: 0

@@ -18,7 +18,7 @@ public class Main {
 
         engine.addSpider(Spider.create(queue)
                 .name("bitcoin")
-                .url("https://www.feixiaohao.com/currencies/bitcoin/")
+                .url("https://dncapi.bqiapp.com/api/coin/market_ticker?page=1&pagesize=10&code=bitcoin&token=&webp=1")
                 .parser(new FXHParser()))
                 .run();
     }
