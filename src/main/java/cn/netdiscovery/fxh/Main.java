@@ -1,6 +1,7 @@
 package cn.netdiscovery.fxh;
 
 import cn.netdiscovery.core.Spider;
+import cn.netdiscovery.core.SpiderEngine;
 import cn.netdiscovery.core.queue.disruptor.DisruptorQueue;
 import cn.netdiscovery.fxh.parser.FXHParser;
 
@@ -13,10 +14,12 @@ public class Main {
 
         DisruptorQueue queue = new DisruptorQueue();
 
-        Spider.create(queue)
+        SpiderEngine engine = SpiderEngine.create();
+
+        engine.addSpider(Spider.create(queue)
                 .name("bitcoin")
                 .url("https://www.feixiaohao.com/currencies/bitcoin/")
-                .parser(new FXHParser())
+                .parser(new FXHParser()))
                 .run();
     }
 }
