@@ -4,6 +4,7 @@ spider:
     initialDelay: 0
     maxRetries: 3
     retryDelayMillis: 1000
+    usePrintRequestPipeline: true
     useConsolePipeline: false
 
   request:
