@@ -47,8 +47,7 @@ public class Main {
                 .request(requests)
                 .parser(new FXHParser());
 
-        engine.addSpider(spider)
-                .run();
+        engine.addSpider(spider).run();
 
         engine.addSpiderJob(spider.getName(),"0 */5 * * * ?", requests);
     }
