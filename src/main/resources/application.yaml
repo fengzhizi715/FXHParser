@@ -14,9 +14,9 @@ spider:
     domainDelay: 0
     autoDomainDelay: true
 
-#  queue:
-#    # default、disruptor
-#    type: default
+  queue:
+    # default、disruptor
+    type: disruptor
 
   pipeline:
     pipelineDelay: 0
