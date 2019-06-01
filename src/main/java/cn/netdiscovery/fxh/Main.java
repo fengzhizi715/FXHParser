@@ -42,10 +42,7 @@ public class Main {
 
         SpiderEngine engine = SpiderEngine.create();
 
-        Spider spider = Spider.create()
-                .name("tony")
-                .request(requests)
-                .parser(new FXHParser());
+        Spider spider = Spider.create().name("tony").request(requests).parser(new FXHParser());
 
         engine.addSpider(spider).run();
 
